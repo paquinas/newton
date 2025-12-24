@@ -2,7 +2,7 @@
 
 julia_version = "1.12.3"
 manifest_format = "2.0"
-project_hash = "f1f23c4bb64011ffc200f3b94965a8e997ecfe8d"
+project_hash = "411f1185c905307970bb9cef837bef6590279cbb"
 
 [[deps.ArgTools]]
 uuid = "0dad84c5-d112-42e6-8d28-ef12dabb789f"
@@ -372,6 +372,12 @@ deps = ["Artifacts", "JLLWrappers", "Libdl"]
 git-tree-sha1 = "ccf0e9339e1f3e66e241ce01bbcbf57a0a9c15a1"
 uuid = "2f80f16e-611a-54ab-bc61-aa92de5b98fc"
 version = "8.45.0+0"
+
+[[deps.Phoenix]]
+deps = ["SimpleDirectMediaLayer"]
+path = "../Phoenix"
+uuid = "f17d5409-dc04-4134-a3ab-24137b9f3f25"
+version = "0.1.0"
 
 [[deps.Pixman_jll]]
 deps = ["Artifacts", "CompilerSupportLibraries_jll", "JLLWrappers", "LLVMOpenMP_jll", "Libdl"]
