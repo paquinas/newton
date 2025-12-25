@@ -2,12 +2,22 @@ using SimpleDirectMediaLayer
 using SimpleDirectMediaLayer.LibSDL2
 
 using Phoenix  # must be in the active environment
-v1 = Vector2(0,1)
-v2 = Vector2(1,0)
-v3 = Vector2(0,1)
+SDL_Init(SDL_INIT_EVERYTHING)
+window = Frame(Vector2(500, 500), Vector2(450, 350), "Window!!!")
 
-println(2 * v1)
-println(v1 * 2)
-println(v2 + v3)
-println(v1 + v2)
-println(Dot(v1, v2))
+global _run = true
+while _run
+    eventRef = Ref{SDL_Event}()
+    while Bool(SDL_PollEvent(eventRef))
+        if eventRef[].type == SDL_QUIT
+            global _run = false
+            break
+        end
+    end
+
+    SDL_Delay(1000 ÷ 60)
+end
+
+SDL_DestroyRenderer(window.renderer)
+SDL_DestroyWindow(window.window)
+SDL_Quit()
